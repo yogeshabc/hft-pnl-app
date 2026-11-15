@@ -1,0 +1,29 @@
+{
+  "name": "hft-pnl-monitor",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w client",
+    "test": "npm test -w server && npm test -w client",
+    "build": "npm run build -w client",
+    "dev:server": "npm run dev -w server",
+    "dev:full": "concurrently \"npm run dev -w server\" \"npm run dev -w client\""
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.29.0",
+    "concurrently": "^9.2.0",
+    "eslint": "^9.29.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "globals": "^16.2.0",
+    "prettier": "^3.6.0",
+    "typescript-eslint": "^8.35.0"
+  },
+  "allowScripts": {
+    "better-sqlite3@12.11.1": true,
+    "esbuild@0.28.2": true,
+    "esbuild@0.25.12": true
+  }
+}
